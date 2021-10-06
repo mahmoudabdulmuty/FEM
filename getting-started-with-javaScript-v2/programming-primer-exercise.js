@@ -1,19 +1,23 @@
-let favoriteBooks = [];
-
-let addFavoriteBook = function (bookName) {
-	if (!bookName.includes('Greet')) favoriteBooks.push(bookName);
-};
-addFavoriteBook('A Song of Ice and Fire');
-addFavoriteBook(`The Greet Gatsby`);
-addFavoriteBook(`Crime & Punishment`);
-addFavoriteBook(`Greet Expectations`);
-addFavoriteBook(`You Don't know JS`);
-
-printFavoriteBooks();
+function addFavoriteBook(bookName) {
+	if (!bookName.includes('Great')) {
+		favoriteBooks.push(bookName);
+	}
+}
 
 function printFavoriteBooks() {
 	console.log(`Favorite Books: ${favoriteBooks.length}`);
-  for (const favorite of favoriteBooks) {
-    console.log(favorite)
-  }
+	for (const bookName of favoriteBooks) {
+		console.log(bookName);
+	}
 }
+
+const favoriteBooks = [];
+
+addFavoriteBook('A Song of Ice and Fire');
+addFavoriteBook('The Great Gatsby');
+addFavoriteBook('Crime & Punishment');
+addFavoriteBook('Great Expectations');
+addFavoriteBook("You Don't Know JS");
+
+// print out favorite books
+printFavoriteBooks();
